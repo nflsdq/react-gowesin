@@ -78,7 +78,6 @@ function BikeDetail() {
       <h1 className='text-2xl font-semibold my-4 text-center'>Detail Sepeda</h1>
       <div className='bg-white rounded-lg shadow-xl overflow-hidden'>
         <div className='flex flex-col lg:flex-row items-center justify-between p-8'>
-          {/* Bike Image */}
           <div className='flex-shrink-0 w-full lg:w-1/3 mb-6 lg:mb-0 lg:mx-5'>
             <img
               src={`https://source.unsplash.com/400x250/?bike,${bike.jenis_sepeda}`}
@@ -87,7 +86,6 @@ function BikeDetail() {
             />
           </div>
 
-          {/* Bike Info */}
           <div className='w-full lg:w-2/3'>
             <h3 className='text-2xl font-semibold text-gray-900 mb-4'>
               {bike.jenis_sepeda_display}
@@ -123,7 +121,6 @@ function BikeDetail() {
         </div>
       </div>
 
-      {/* Confirmation Modal */}
       {showModal && (
         <div className='fixed inset-0 z-50 flex items-center justify-center bg-gray-900 bg-opacity-50'>
           <div className='bg-white p-6 rounded-lg shadow-lg w-11/12 max-w-md'>

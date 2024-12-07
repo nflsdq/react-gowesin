@@ -4,7 +4,6 @@ function Footer() {
   return (
     <footer className='bg-blue-500 text-white py-8 px-24'>
       <div className='container mx-auto px-6'>
-        {/* Bagian Kontak */}
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 mb-8'>
           <div>
             <h3 className='text-lg font-semibold text-white'>Kontak Kami</h3>

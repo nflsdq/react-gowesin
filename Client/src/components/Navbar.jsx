@@ -9,9 +9,9 @@ function Navbar({ isAuthenticated, onLogout }) {
 
   return (
     <nav className='max-w-full mx-auto flex justify-between items-center py-3 px-24 bg-white border-b-4 border-black fixed top-0 left-0 w-full z-10'>
-      <h1 className='text-2xl font-bold text-black'>
-        🚲 Gowes<span className='text-blue-500'>IN</span>
-      </h1>
+      <Link to='/' className='text-2xl font-bold text-black hover:text-black'>
+        Gowes<span className='text-blue-500'>IN</span>
+      </Link>
 
       <div className='ml-auto space-x-4 px-6'>
         <Link

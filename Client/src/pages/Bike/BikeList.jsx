@@ -27,7 +27,6 @@ function BikeList() {
     fetchBikes();
   }, []);
 
-  // Menambahkan logika pencarian berdasarkan URL params
   useEffect(() => {
     const searchParams = new URLSearchParams(window.location.search);
     const jenisSepedaQuery = searchParams.get("jenis_sepeda") || "";
@@ -112,7 +111,6 @@ function BikeList() {
     <div className='container mx-auto px-24 py-16'>
       <h1 className='text-2xl font-semibold my-4 text-center'>Daftar Sepeda</h1>
 
-      {/* Filter Section */}
       <div className='flex justify-between mb-6'>
         <div>
           <label htmlFor='stasiun' className='text-gray-700 mr-2'>
@@ -153,7 +151,6 @@ function BikeList() {
         </div>
       </div>
 
-      {/* Bike List Section */}
       <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12'>
         {filteredBikes.map((sepeda) => (
           <div
