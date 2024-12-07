@@ -63,7 +63,7 @@ function RentalHistory() {
       <table className='min-w-full table-auto bg-white shadow-lg rounded-lg overflow-hidden'>
         <thead className='bg-blue-500 text-white'>
           <tr>
-            <th className='px-4 py-2 text-left'>#</th>
+            <th className='px-4 py-2 text-left'>ID</th>
             <th className='px-4 py-2 text-left'>Waktu Pengambilan</th>
             <th className='px-4 py-2 text-left'>Waktu Pengembalian</th>
             <th className='px-4 py-2 text-left'>Biaya</th>
@@ -74,7 +74,7 @@ function RentalHistory() {
         <tbody>
           {rentals.map((rental) => (
             <tr key={rental.id_peminjaman} className='hover:bg-gray-100'>
-              <td className='px-4 py-2'>{rental.id_peminjaman}</td>
+              <td className='px-4 py-2'>#{rental.id_peminjaman}</td>
               <td className='px-4 py-2'>{rental.waktu_pengambilan}</td>
               <td className='px-4 py-2'>{rental.waktu_pengembalian}</td>
               <td className='px-4 py-2'>Rp. {rental.total_biaya}</td>

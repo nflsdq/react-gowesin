@@ -57,8 +57,8 @@ function Home() {
           <div className='lg:w-1/2'>
             <h1 className='text-4xl font-bold mb-6'>
               Jelajahi Kampusmu dengan{" "}
-              <Link to='/' className='text-blue-600 font-bold'>
-                GowesIN
+              <Link to='/' className='text-black font-bold'>
+                Gowes<span className='text-blue-500'>IN</span>
               </Link>
             </h1>
             <p className='text-lg mb-6'>

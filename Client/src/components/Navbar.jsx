@@ -3,13 +3,15 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 
 function Navbar({ isAuthenticated, onLogout }) {
   const navigate = useNavigate();
-  const location = useLocation(); // Get the current route location
+  const location = useLocation();
 
-  const isActive = (path) => location.pathname === path; // Check if the link is active
+  const isActive = (path) => location.pathname === path;
 
   return (
     <nav className='max-w-full mx-auto flex justify-between items-center py-3 px-24 bg-white border-b-4 border-black fixed top-0 left-0 w-full z-10'>
-      <h1 className='text-2xl font-bold text-black'>🚲 GowesIN</h1>
+      <h1 className='text-2xl font-bold text-black'>
+        🚲 Gowes<span className='text-blue-500'>IN</span>
+      </h1>
 
       <div className='ml-auto space-x-4 px-6'>
         <Link

@@ -32,12 +32,17 @@ class SepedaSerializer(serializers.ModelSerializer):
         return obj.biaya_sepeda()
 
 class PeminjamanSerializer(serializers.ModelSerializer):
+    id_peminjaman = serializers.SerializerMethodField()
     waktu_pengambilan = serializers.DateTimeField(format="%d/%m/%Y %H:%M:%S")
     waktu_pengembalian = serializers.DateTimeField(format="%d/%m/%Y %H:%M:%S")
 
     class Meta:
         model = Peminjaman
         fields = ('__all__')
+
+    def get_id_peminjaman(self, obj):
+        tanggal = obj.waktu_pengambilan.strftime("%d%m") if obj.waktu_pengambilan else "00-00"
+        return f"{tanggal}{obj.id_peminjaman}"
 
 class PembayaranSerializer(serializers.ModelSerializer):
     class Meta:
